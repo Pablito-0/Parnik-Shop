@@ -1,0 +1,12 @@
+{% extends 'parnik_app/base.html' %}
+
+
+
+{% block title %}Каталог{% endblock %}
+
+{% block content %}
+{% for c in categories %}
+		<li><a href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+width: 100%;
+height: 100%;
+margin: 0;
+/* overflow: hidden; */
+}
+#head{
+width: 100%;
+height: 60px;
+color: white;
+/* background-color: #212529; */
+background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+font-family:sans-serif;
+position: relative;
+}
+/* настройки для лого */
+#head>a>img{
+float: left;
+height: 40px;
+width: 120px;
+margin-left: 3vw;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right: 5vw;
+}
+#head>a{
+width: 100%;
+height: 100%;
+/* на случай если кто-то захочет поставить иконку вместо лого */
+text-decoration:none;
+color: white;
+}
+/* #head>a:hover{
+color:rgb(180, 180, 180);
+background-color: rgb(180, 180, 180);
+} */
+/* ... */
+#head>.content>p{
+display: inline-block;
+height: 5%;
+margin-left: 40px;
+margin-bottom: 50px;
+}
+#head>.content>.trashbag{
+margin-left: 37vw;
+}
+#head>.content>p>a{
+width: 100%;
+height: 100%;
+text-decoration:none;
+color: white;
+}
+#head>.content>p>a:hover{
+color:rgb(180, 180, 180);
+}
+#head>.content>p>a>svg{
+width:24px;
+height:24px;
+margin: 0 auto;
+}
+#head>.content{
+padding-left: 50vw;
+width: 30%;
+height: 100%;
+margin: 0 6vw;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items:flex-end;
+text-align: center;
+position: relative;
+}
+#search{
+    width: 100%;
+    height: 60px;
+
+/*     background-color: #212529; */
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+#search>input{
+    width: 400px;
+    height: 30px;
+    margin:  10px 10px 10px 33% ;
+    border: none;
+    box-shadow: inset 2px 4px 3px -2px rgba(0, 0, 0, 0.6);/* -2px это растяжение,которое уберет самые темные участки,сделано для реалистичности */
+    border-radius: 20px;
+    padding-left: 10px;
+    outline:none;
+}
+#footer{
+width: 100%;
+height: 70px;
+position: absolute;
+bottom: 0;
+left: 0;
+color: white;
+background-color: #696969;
+font-family:sans-serif;
+padding: 5px 20%;
+}
+/* #catalog{
+width: 150px;
+height: 200px;
+background-color:#535353;
+position: absolute;
+
+top: 0;
+border-radius: 10px;
+
+margin-top: 50px;
+margin-left: 37vw;
+z-index: -1;
+color:white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+
+}
+#catalog>p{
+display: inline-block;
+height: 20px;
+width: 50px;
+margin: 10px auto;
+padding-left: 10px;
+} */
+
+/* li{
+list-style-type: none;
+} */
+/* p.catalog-hov a:hover >ul{
+display: block;
+} */
+/* .catalog-hov:hover + #catalog h1 { display: block;}
+.catalog-hov:hover ~ #catalog h1 { display: block;}
+.catalog-hov.b2 ~ #catalog h1 { display: none;} */
+
+/* @keyframes catalog_list{
+
+0%{
+    height: 1%;
+}
+
+100%{
+    height: 40%;
+}
+} */
