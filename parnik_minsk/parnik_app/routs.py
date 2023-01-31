@@ -6,11 +6,12 @@ from parnik_app.views import *
 
 urlpatterns = [
     # path('', MainPage.as_view, name='home'),  # http://127.0.0.1:8000/
-    path('', index, name='home'),  # http://127.0.0.1:8000/
-    path('catalog/', Catalog.as_view(), name='catalog'),  # http://127.0.0.1:8000/catalog/
-    path('sales/', Sales.as_view, name='sales'),  # http://127.0.0.1:8000/sales/
-    path('manufacturer/', Manufact.as_view, name='manufacturer'),  # http://127.0.0.1:8000/manufacturer/
+    path('', index, name='home'),  # http://127.0.0.1:8000/ - главная страница
+    path('catalog/', Catalog.as_view(), name='catalog'),  # http://127.0.0.1:8000/catalog/ - страница каталога
+    path('sales/', sales, name='sales'),  # http://127.0.0.1:8000/sales/ - страница акций
     # path('contacts/', Contacts.as_view, name='contacts'),  # http://127.0.0.1:8000/contacts/
-    path('contacts/', contacts, name='contacts'),  # http://127.0.0.1:8000/contacts/
-    # path('category/<slug:category_slug>', AppCategory.as_view, name='categories')
+    path('contacts/', contacts, name='contacts'),  # http://127.0.0.1:8000/contacts/ - страница контактов
+    path('shop-list/', shoplist, name='shoplist'), # http://127.0.0.1:8000/shop-list/ - страиница корзины
+    path('category/<slug:category_slug>/', ProductCategory.as_view(), name='category'),
+    path('product/<int:pk>/', ProductDetail.as_view(), name='product')# http://127.0.0.1:8000/contacts/ - страница товара по категории
 ]

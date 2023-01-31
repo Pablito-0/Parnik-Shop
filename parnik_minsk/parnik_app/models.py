@@ -23,7 +23,7 @@ class Product(models.Model):
         return f"{self.title}"
 
     def get_absolute_url(self):
-        return reverse('post', kwargs={'product_slug': self.slug})
+        return reverse('category', kwargs={'product_slug': self.slug})
 
     class Meta:
         verbose_name = "Товар"
@@ -40,7 +40,7 @@ class Category(models.Model):
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='URL')
 
     def get_absolute_url(self):
-        return reverse('category', args={'category_slug': self.slug})
+        return reverse('category', kwargs={'category_slug': self.slug})
 
     def __str__(self):
         return self.name

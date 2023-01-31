@@ -1,0 +1,21 @@
+{% extends 'parnik_app/base.html' %}
+
+{% block title %}Товар по категории{% endblock %}
+
+{% block content %}
+    <h1>Список товаров в категории</h1>
+
+    {% if one_category %}
+    <ul>
+
+      {% for one_good in one_category %}
+      <li>
+        <a href="{{ one_good.get_absolute_url }}">{{ one_good.title }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>В данной категории товары пока отсутствуют.</p>
+    {% endif %}
+{% endblock %}
